@@ -1,32 +1,7 @@
-body {
-
-}
-nav ul, footer ul {
-
-}
-nav ul li, footer ul li {
-
-}
-a {
-
-}
-a:hover {
-
-}
-h1 {
-
-}
-p {
-
-}
-footer {
-
-}
-
-ul.posts { 
-
-}
-
-ul.posts li {
-
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%
+  overflow: hidden
+  background-color: #333
 }
