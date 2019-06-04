@@ -97,35 +97,6 @@ body {
 </div>
   
 <script>
-function check(){
- if(turnedLeft != 0){
-  menuLeft() 
- }
-}
-function makeHomeActive() {
-   var element = document.getElementById("home");
-   var element1 = document.getElementById("contact");
-   var element2 = document.getElementById("about");
-      element.classList.add("active");
-      element1.classList.remove("active");
-      element2.classList.remove("active");
-}
-function makeContactActive() {
-   var element = document.getElementById("home");
-   var element1 = document.getElementById("contact");
-   var element2 = document.getElementById("about");
-      element.classList.remove("active");
-      element1.classList.add("active");
-      element2.classList.remove("active");
-}
-function makeAboutActive() {
-   var element = document.getElementById("home");
-   var element1 = document.getElementById("contact");
-   var element2 = document.getElementById("about");
-      element.classList.remove("active");
-      element1.classList.remove("active");
-      element2.classList.add("active");
-}
 function scrollFunction() {
   if (document.documentElement.scrollTop > 80 && turnedLeft==0) {
     document.getElementById("navbar").style.padding = "30px 10px";
@@ -195,6 +166,11 @@ function menuTop(){
     document.getElementById("logo").style.borderRadius= "100px";
     document.getElementById("logo").style.padding= "12px";
 }
+  function check(){
+ if(turnedLeft == 0){
+  menuLeft() 
+ }
+ }
   // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
    window.onscroll = function() {scrollFunction()};
 </script>
