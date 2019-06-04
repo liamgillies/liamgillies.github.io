@@ -17,7 +17,7 @@ body {
   padding: 12px;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 4px;
+  border-radius: 100px;
   cursor: pointer;
   display: inline-block;
 }
@@ -41,7 +41,7 @@ body {
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
-  border-radius: 4px;
+  border-radius: 100px;
 }
 
 #navbar #logo {
@@ -96,10 +96,10 @@ body {
 <div id="navbar">
   <a href="#default" id="logo">Liam Gillies</a>
   <div id="navbar-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <button class="btn" id="butn" onclick="menuLeft()">Left</button>
+    <a id= home onclick= makeHomeActive() href="#home">Home</a>
+    <a id= contact onclick= makeContactActive() href="#contact">Contact</a>
+    <a id= about onclick= makeAboutActive() href="#about">About</a>
+    <button id="butn" class="btn" onclick="menuLeft()">Left</button>
   </div>
 </div>
 
@@ -111,6 +111,31 @@ body {
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
+
+function makeHomeActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.add("active");
+      element1.classList.remove("active");
+      element2.classList.remove("active");
+}
+function makeContactActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.remove("active");
+      element1.classList.add("active");
+      element2.classList.remove("active");
+}
+function makeAboutActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.remove("active");
+      element1.classList.remove("active");
+      element2.classList.add("active");
+}
 
 function scrollFunction() {
   if (document.documentElement.scrollTop > 80 ) {
@@ -136,6 +161,7 @@ function menuLeft(){
     document.getElementById("butn").innerHTML= "Top";
     document.getElementById("defaultDiv").style.marginLeft= "160px";
     document.getElementById("defaultDiv").style.marginTop= "100px";
+    document.getElementById("navbar a").style.float= "left";
 
 }
 </script>
