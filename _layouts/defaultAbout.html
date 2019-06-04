@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn {
+  border: none;
+  color: black;
+  background-color: inherit;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+}
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+#navbar a {
+  float: left;
+  color: black;
+  text-align: left;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#navbar .btn:hover {
+  background-color: #ddd;
+  color: black;
+}
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+#defaultDiv {
+  margin-top:210px;
+  padding:15px 15px 2500px;
+  font-size:30px
+}
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+#navbar-right {
+  float:right
+}
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#default" id="logo">Liam Gillies</a>
+  <div id="navbar-right">
+    <a id= home class= active onclick= makeHomeActive() href="/">Home</a>
+    <a id= contact onclick= makeContactActive() href="/contact">Contact</a>
+    <a id= about onclick= makeAboutActive() href="/about">About</a>
+    <button id="butn" class="btn" onclick="menuLeft()">Toggle Left</button>
+  </div>
+</div>
+
+<div id="defaultDiv">
+<p>About me<p>
+</div>
+  
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+makeAboutActive()
+
+function makeHomeActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.add("active");
+      element1.classList.remove("active");
+      element2.classList.remove("active");
+}
+function makeContactActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.remove("active");
+      element1.classList.add("active");
+      element2.classList.remove("active");
+}
+function makeAboutActive() {
+   var element = document.getElementById("home");
+   var element1 = document.getElementById("contact");
+   var element2 = document.getElementById("about");
+      element.classList.remove("active");
+      element1.classList.remove("active");
+      element2.classList.add("active");
+}
+function scrollFunction() {
+  if (document.documentElement.scrollTop > 80 && turnedLeft==0) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else if(turnedLeft == 0) {
+    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+var turnedLeft = 0;
+function menuLeft(){
+if(turnedLeft == 0){
+    turnedLeft +=1;
+    document.getElementById("navbar").style.width= "110px";
+    document.getElementById("navbar").style.height= "100%";
+    document.getElementById("navbar").style.padding= "20px 10px";
+    document.getElementById("logo").innerHTML= "LG";
+    document.getElementById("butn").innerHTML= "Back";
+    document.getElementById("defaultDiv").style.marginLeft= "160px";
+    document.getElementById("defaultDiv").style.marginTop= "0px";
+    
+    document.getElementById("home").style.lineHeight= "50px";
+    document.getElementById("home").style.borderRadius= "0px";
+    document.getElementById("home").style.padding= "19px";
+    document.getElementById("contact").style.lineHeight= "64px";
+    document.getElementById("contact").style.borderRadius= "0px";
+    document.getElementById("about").style.lineHeight= "49px";
+    document.getElementById("about").style.borderRadius= "0px";
+    document.getElementById("about").style.padding= "19.5px";
+    document.getElementById("butn").style.lineHeight= "42px";
+    document.getElementById("butn").style.borderRadius= "0px";
+    document.getElementById("butn").style.padding= "23px";
+    
+    document.getElementById("logo").style.lineHeight= "50px";
+    document.getElementById("logo").style.borderRadius= "9999px";
+    document.getElementById("logo").style.padding= "19px";
+    } else {menuTop()}
+}
+function menuTop(){
+   turnedLeft -=1;
+    document.getElementById("navbar").style.width= "100%";
+    document.getElementById("navbar").style.height= "auto";
+     if (document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    }else{
+    document.getElementById("navbar").style.padding= "80px 10px";
+    }
+    document.getElementById("logo").innerHTML= "Liam Gillies";
+    document.getElementById("butn").innerHTML= "Toggle Left";
+    document.getElementById("defaultDiv").style.marginLeft= "0px";
+    document.getElementById("defaultDiv").style.marginTop= "210px";
+    
+    document.getElementById("home").style.lineHeight= "25px";
+    document.getElementById("home").style.borderRadius= "100px";
+    document.getElementById("home").style.padding= "12px";
+    document.getElementById("contact").style.lineHeight= "25px";
+    document.getElementById("contact").style.borderRadius= "100px";
+    document.getElementById("about").style.lineHeight= "25px";
+    document.getElementById("about").style.borderRadius= "100px";
+    document.getElementById("about").style.padding= "12px";
+    document.getElementById("butn").style.lineHeight= "25px";
+    document.getElementById("butn").style.borderRadius= "100px";
+    document.getElementById("butn").style.padding= "12px";
+    
+    document.getElementById("logo").style.lineHeight= "25px";
+    document.getElementById("logo").style.borderRadius= "100px";
+    document.getElementById("logo").style.padding= "12px";
+}
+   window.onscroll = function() {scrollFunction()};
+</script>
+
+</body>
+</html>
