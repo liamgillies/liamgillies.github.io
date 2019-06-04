@@ -137,7 +137,7 @@ function menuLeft(){
 if(turnedLeft == 0){
     turnedLeft +=1;
 	document.getElementById("navbar").style.width= "110px";
-    document.getElementById("navbar").style.height= "100%";
+ 
     document.getElementById("navbar").style.padding= "20px 10px";
     document.getElementById("logo").innerHTML= "LG";
     document.getElementById("butn").innerHTML= "Back";
@@ -159,6 +159,8 @@ if(turnedLeft == 0){
     document.getElementById("logo").style.lineHeight= "50px";
     document.getElementById("logo").style.borderRadius= "9999px";
     document.getElementById("logo").style.padding= "19px";
+	
+	document.getElementById("navbar").style.height= "100%";
     } else {menuTop()}
 }
 function menuTop(){
