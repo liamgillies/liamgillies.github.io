@@ -85,9 +85,9 @@ body {
 <div id="navbar">
   <a href="#default" id="logo">Liam Gillies</a>
   <div id="navbar-right">
-    <a id= home class= active onclick= makeHomeActive() href="/">Home</a>
-    <a id= contact onclick= makeContactActive() href="/contact">Contact</a>
-    <a id= about onclick= makeAboutActive() href="/about">About</a>
+    <a id= home class= active onclick= check() href="/">Home</a>
+    <a id= contact onclick= check() href="/contact">Contact</a>
+    <a id= about onclick= check() href="/about">About</a>
     <button id="butn" class="btn" onclick="menuLeft()">Toggle Left</button>
   </div>
 </div>
@@ -97,7 +97,11 @@ body {
 </div>
   
 <script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+function check(){
+ if(turnedLeft != 0){
+  menuLeft() 
+ }
+}
 function makeHomeActive() {
    var element = document.getElementById("home");
    var element1 = document.getElementById("contact");
@@ -191,6 +195,7 @@ function menuTop(){
     document.getElementById("logo").style.borderRadius= "100px";
     document.getElementById("logo").style.padding= "12px";
 }
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
    window.onscroll = function() {scrollFunction()};
 </script>
 
