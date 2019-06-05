@@ -85,9 +85,9 @@ body {
 <div id="navbar">
   <a href="#default" id="logo">Liam Gillies</a>
   <div id="navbar-right">
-    <a id= home class= active onclick= check();return false href="/">Home</a>
-    <a id= contact onclick= check();return false href="/contact">Contact</a>
-    <a id= about onclick= check();return false href="/about">About</a>
+    <a id= home class= active onclick= check();makeHomeActive() href="/">Home</a>
+    <a id= contact onclick= check();makeContactActive() href="/contact">Contact</a>
+    <a id= about onclick= check();makeAboutActive() href="/about">About</a>
     <button id="butn" class="btn" onclick="menuLeft()">Toggle Left</button>
   </div>
 </div>
@@ -193,7 +193,7 @@ function check(){
  if(turnedLeft == 0){
   menuLeft() 
  }
- }
+}
 
   // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
    window.onscroll = function() {scrollFunction()};
