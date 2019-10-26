@@ -5,11 +5,17 @@ class: home
 ---
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    $( document ).ready(class="active" {
-        console.log( "document loaded" );
+    function scrollTop() {
+    $(window).scroll(function() {
+        $(window).scrollTop() > 50 ? $('#top').fadeIn('slow') : $('#top').fadeOut('slow');
     });
+
+    $('a[href=#top]').click(function() {
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+    });
+}
     </script>
 </head>
 <body>
