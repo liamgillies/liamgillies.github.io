@@ -5,8 +5,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(img/loop.gif);
   background-size: cover;
-  overflow-y: auto;
   background-repeat: no-repeat;
+  background-size: 100% 120vh;
   overflow-x: hidden;
 }
 body i{
@@ -22,7 +22,7 @@ body i{
 .section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ body i{
 .section h1 {
   position: absolute;
   text-align: center;
-  margin-top: -9%;
+  margin-top: -15%;
   font-family: 'Alegreya Sans SC';
   font-size: 5rem;
   color: #BFEFF8;
@@ -54,8 +54,8 @@ body i{
   background-color: #425C60;
   background-size: cover;
   width: 100vw;
-  height: 116vh;
-  opacity: 0.6;
+  height: 120vh;
+  opacity: 0.55;
 }
 
 .container {
@@ -68,7 +68,7 @@ body i{
 
 .container .box {
   position: inherit;
-  top: 40%;
+  top: 25%;
   width: calc(100%/5);
   height: 100%;
   float: left;
@@ -79,6 +79,7 @@ body i{
   opacity: 0.6;
   transition: 0.5s;
   background: #648AD5;
+  animation: fadeIn 0.5s;
 }
 
 .container .box .icon {
@@ -87,7 +88,7 @@ body i{
   left: 0px;
   width: 100%;
   height: 100%;
-  transition: 0.5s;
+  transition: 0s;
   z-index: 0;
 }
 
@@ -105,10 +106,6 @@ body i{
   transition: 0.5s;
   color: #fff;
 }
-
-/* .container .box:hover .icon .fas {
-  font-size: 40px;
-} */
 
 .container .box .content {
   position: absolute;
@@ -171,7 +168,7 @@ background: #999;
   background: #000;
 }
 
-.container .box:hover:nth-child(1){
+.container .box:hover:nth-child(1) {
   opacity: 1;
   transition: 0.5s;
   overflow-y: scroll;
@@ -200,18 +197,139 @@ background: #999;
   background: #648AD5;
 }
 
+.button {
+  background-color: #224a8c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  top: inherit;
+  width: 25px;
+  height: 25px;
+  position: inherit;
+  opacity: 0;
+  left: 85%;
+}
+
+.button .fas{
+  position: absolute;
+  top: 19%;
+  left: 22%;
+}
+
+.container .box:hover .button{
+  opacity: 1;
+}
+
+.button:hover {
+  background-color: #03adfc;
+}
+
+/* -----bigbox----- */
+
+.container .bigbox {
+  position: absolute;
+  top: -50%;
+  width: 80vw;
+  height: 85vh;
+  float: left;
+  margin-left: 10%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 1;
+  transition: 0s;
+  background: #648AD5;
+  z-index: 2;
+}
+
+.container .bigbox .icon {
+  opacity: 0;
+}
+
+.container .bigbox .content {
+  position: absolute;
+  top: 0%;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: 0s;
+  opacity: 1;
+}
+
+.container .bigbox .content h3 {
+  margin: 0 0 10px;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+  top: -100px;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.container .bigbox .content p {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+}
+
+/* if i need scrollbars */
+/* .bigbox:nth-child(1) {
+  overflow-y: scroll;
+}
+
+.bigbox:nth-child(2) {
+  overflow-y: hidden;
+}
+
+.bigbox:nth-child(3) {
+  overflow-y: hidden;
+} */
+
+.bigbox .button {
+  background-color: #224a8c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  top: inherit;
+  width: 25px;
+  height: 25px;
+  position: inherit;
+  opacity: 1;
+  left: 92%;
+}
+
+.credits{
+  background-color: #425C60;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  opacity: 1;
+}
+
+h4{
+  font-size: 10px;
+  color: #ababab;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.credits a{
+  color:#6a9ecc;
+  font-style: italic;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
   }
   to {
     opacity: 0.6;
