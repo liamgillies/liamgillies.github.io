@@ -304,6 +304,10 @@ background: #999;
   left: 92%;
 }
 
+.bigbox .button:hover{
+  background-color: #03adfc;
+}
+
 .credits{
   background-color: #425C60;
   position: relative;
