@@ -20,6 +20,8 @@ $(document).ready(function() {
     } else {
         $('#box1').removeClass('bigbox');
         $('#box1').addClass('box');
+        $('#icon1').css("transition", "0s");
+        $('#iconfas1').css("transition", "0s");
     }
     });
 
@@ -32,6 +34,8 @@ $(document).ready(function() {
     } else {
         $('#box2').removeClass('bigbox');
         $('#box2').addClass('box');
+        $('#icon2').css("transition", "0s");
+        $('#iconfas2').css("transition", "0s");
     }
     });
 
@@ -41,10 +45,34 @@ $(document).ready(function() {
       if($('#box3').hasClass('box')) {
         $('#box3').removeClass('box');
         $('#box3').addClass('bigbox');
+
+        $('#overlay1').hide();
+        $('#projects').hide();
+        $('#project1').hide()
+        $('#text1').hide();
+        $('#githubimg1').hide();
+        $('#githubicon1').hide();
+
     } else {
         $('#box3').removeClass('bigbox');
         $('#box3').addClass('box');
+        $('#icon3').css("transition", "0s");
+        $('#iconfas3').css("transition", "0s");
+
+        $('#overlay1').show();
+        $('#projects').show();
+        $('#project1').show();
+        $('#text1').show();
+        $('#githubimg1').show();
+        $('#githubicon1').show();
     }
     });
+
+    $("#overlay1").mouseenter(function() {
+    $("#overlay1").css("opacity", "1");
+    })
+    $("#overlay1").mouseleave(function() {
+    $("#overlay1").css("opacity","0");
+    })
 
 });
