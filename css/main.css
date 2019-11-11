@@ -143,12 +143,14 @@ background: #999;
   padding: 0;
   color: #fff;
   font-size: 24px;
+  width: 100%;
 }
 
 .container .box:hover .content h3 {
   top: -100px;
   opacity: 1;
   transition: 0.5s;
+  width: 100%;
 }
 
 .container .box .content p {
@@ -157,11 +159,13 @@ background: #999;
   padding: 0;
   color: #fff;
   opacity: 0;
+  width: 100%;
 }
 
 .container .box:hover .content p{
   opacity: 1;
   transition: 0.5s;
+  width: 100%;
 }
 
 .container .box:nth-child(1) .icon {
@@ -233,7 +237,6 @@ background: #999;
   top: -50%;
   width: 80vw;
   height: 85vh;
-  float: left;
   margin-left: 10%;
   box-sizing: border-box;
   border-radius: 10px;
@@ -250,12 +253,13 @@ background: #999;
 
 .container .bigbox .content {
   position: absolute;
-  top: 0%;
+  top: 5%;
   padding: 5%;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-bottom: 5%;
   transition: 0s;
   opacity: 1;
+  width: 100%;
 }
 
 .container .bigbox .content h3 {
@@ -264,39 +268,38 @@ background: #999;
   padding: 0;
   color: #fff;
   font-size: 24px;
-  top: -100px;
+  top: 0;
   opacity: 1;
   transition: 0.5s;
+  transition: 0s;
+  width: 100%;
 }
 
 .container .bigbox .content p {
   margin: 0;
-  text-align: center;
+  text-align: left;
   padding: 0;
   color: #fff;
+  width: 100%;
 }
 
 /* if i need scrollbars */
 /* .bigbox:nth-child(1) {
   overflow-y: scroll;
 }
-
 .bigbox:nth-child(2) {
   overflow-y: hidden;
 }
-
 .bigbox:nth-child(3) {
   overflow-y: hidden;
 } */
 
 .bigbox .button {
   background-color: #224a8c;
-  border: none;
   color: white;
   font-size: 16px;
   cursor: pointer;
   border-radius: 50%;
-  top: inherit;
   width: 25px;
   height: 25px;
   position: inherit;
@@ -329,6 +332,86 @@ h4{
 .credits a{
   color:#6a9ecc;
   font-style: italic;
+}
+
+.projects{
+  position: relative;
+}
+
+.projectimg{
+  opacity: 0;
+  width: 100%;
+  height: 45%;
+  border: 1px solid white;
+  border-radius: 2%;
+  display: block;
+}
+
+.projectoverlay{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 2%;
+
+}
+
+.text{
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.box:hover .projectimg{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.projectoverlay:hover .text{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.githubimg{
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding: 2px;
+  cursor: pointer;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.githubimg:hover{
+  color: #0765f7;
+}
+
+.box .description{
+  display: none;
+}
+
+.bigbox .description{
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  color: #fff;
+  width: 100%;
 }
 
 @keyframes fadeIn {
