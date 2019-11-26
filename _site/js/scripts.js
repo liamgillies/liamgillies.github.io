@@ -39,6 +39,8 @@ $(document).ready(function() {
     }
     });
 
+    $('#bigprojects').hide();
+
     $(document).on('click', '#button3', function() {
       $('#buttonimg3').toggleClass("fa-compress");
       $('#box3').css("transition", "0s");
@@ -53,6 +55,8 @@ $(document).ready(function() {
         $('#githubimg1').hide();
         $('#githubicon1').hide();
 
+        $('#bigprojects').show();
+
     } else {
         $('#box3').removeClass('bigbox');
         $('#box3').addClass('box');
@@ -65,6 +69,8 @@ $(document).ready(function() {
         $('#text1').show();
         $('#githubimg1').show();
         $('#githubicon1').show();
+
+        $('#bigprojects').hide();
     }
     });
 
@@ -74,5 +80,10 @@ $(document).ready(function() {
     $("#overlay1").mouseleave(function() {
     $("#overlay1").css("opacity","0");
     })
+
+    $(document).on('click','#githubimg2', function() {
+      $('#githubimg2').css("color","#8800ff");
+      window.console.log("adsf");
+    });
 
 });

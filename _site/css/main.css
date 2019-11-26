@@ -35,7 +35,7 @@ body i{
   text-align: center;
   margin-top: -15%;
   font-family: 'Alegreya Sans SC';
-  font-size: 5rem;
+  font-size: 500%;
   color: #BFEFF8;
   z-index: 1;
 }
@@ -61,7 +61,7 @@ body i{
 .container {
   position: relative;
   width: 100%;
-  height: 40%;
+  height: 48vh;
   margin: 50px auto;
   z-index: 1;
 }
@@ -175,7 +175,7 @@ background: #999;
 .container .box:hover:nth-child(1) {
   opacity: 1;
   transition: 0.5s;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: #648AD5;
 }
 
@@ -197,7 +197,7 @@ background: #999;
 .container .box:hover:nth-child(3){
   opacity: 1;
   transition: 0.5s;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: #648AD5;
 }
 
@@ -263,12 +263,12 @@ background: #999;
 }
 
 .container .bigbox .content h3 {
-  margin: 0 0 10px;
+  margin-top: -20px;
+  margin-bottom: 15px;
   text-align: center;
   padding: 0;
   color: #fff;
-  font-size: 24px;
-  top: 0;
+  font-size: 30px;
   opacity: 1;
   transition: 0.5s;
   transition: 0s;
@@ -287,11 +287,9 @@ background: #999;
 /* .bigbox:nth-child(1) {
   overflow-y: scroll;
 }
-
 .bigbox:nth-child(2) {
   overflow-y: hidden;
 }
-
 .bigbox:nth-child(3) {
   overflow-y: hidden;
 } */
@@ -361,7 +359,6 @@ h4{
   opacity: 0;
   background-color: rgba(0,0,0,0.7);
   border-radius: 2%;
-
 }
 
 .text{
@@ -404,16 +401,89 @@ h4{
   color: #0765f7;
 }
 
-.box .description{
-  display: none;
+.bigbox .bigprojects{
+  position: relative;
+}
+
+.bigbox .bigprojectimg{
+  top: 6vh;
+  border: 1px solid white;
+  border-radius: 2%;
+  right: 2vw;
+  height: 20%;
+  width: 30%;
+  border-radius: 2%;
+  display: block;
+  margin: none;
+  float: right;
+  position: relative;
+}
+
+.bigbox .border{
+  border: none;
+  box-shadow: 0px 0px 10px 0px #425f8c;
+  width: 100%;
+  height: 40vh;
+  vertical-align: top;
+  float: right;
+  position: absolute;
+  background-color: #83b0f7;
 }
 
 .bigbox .description{
-  margin: 0;
-  text-align: left;
-  padding: 0;
-  color: #fff;
+  float: left;
   width: 100%;
+  position: relative;
+}
+
+.bigbox .description .projtitle{
+  color: #313654;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 1%;
+  width: 70%;
+  position: relative;
+}
+
+.bigbox .description .texts{
+  text-align: left;
+  color: #292e4a;
+  font-size: 18px;
+  width: 60%;
+  margin-top: 1%;
+  margin-left: 6%;
+  margin-right: 30%;
+  position: relative;
+  display: block;
+}
+
+.bigbox .githubimg{
+  color: blue;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 1%;
+  position: absolute;
+  display: inline-block;
+  top: 100%;
+  left: 35%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+
+.bigbox .githubimg:hover{
+  color: #8800ff;
+}
+
+.bigbox .used{
+  position: relative;
+  background: #adcdff;
+  text-align: center;
+  display: inline-block;
+  padding: 1vh 1vw;
+  border: 2px solid blue;
+  border-radius: 25px;
+  margin: 5px;
+  bottom: -25%;
 }
 
 @keyframes fadeIn {
