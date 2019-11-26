@@ -35,7 +35,7 @@ body i{
   text-align: center;
   margin-top: -15%;
   font-family: 'Alegreya Sans SC';
-  font-size: 500%;
+  font-size: 5em;
   color: #BFEFF8;
   z-index: 1;
 }
@@ -62,7 +62,7 @@ body i{
   position: relative;
   width: 100%;
   height: 48vh;
-  margin: 50px auto;
+  margin: 3.125em auto;
   z-index: 1;
 }
 
@@ -74,7 +74,7 @@ body i{
   float: left;
   margin-left: 10%;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0.625em;
   overflow: hidden;
   opacity: 0.6;
   transition: 0.5s;
@@ -84,8 +84,8 @@ body i{
 
 .container .box .icon {
   position: inherit;
-  top: 0px;
-  left: 0px;
+  top: 0em;
+  left: 0em;
   width: 100%;
   height: 100%;
   transition: 0s;
@@ -102,7 +102,7 @@ body i{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 80px;
+  font-size: 5em;
   transition: 0.5s;
   color: #fff;
 }
@@ -110,7 +110,7 @@ body i{
 .container .box .content {
   position: absolute;
   top: 0%;
-  height: calc(100% - 100px);
+  height: calc(100% - 6.25em);
   padding: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -119,17 +119,17 @@ body i{
 }
 
 ::-webkit-scrollbar {
-width: 12px;
-height: 12px;
+width: 0.75em;
+height: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
 background: #f5f5f5;
-border-radius: 10px;
+border-radius: 0.625em;
 }
 
 ::-webkit-scrollbar-thumb {
-border-radius: 10px;
+border-radius: 0.625em;
 background: #ccc;
 }
 
@@ -138,16 +138,16 @@ background: #999;
 }
 
 .container .box .content h3 {
-  margin: 0 0 10px;
+  margin: 0 0 0.625em;
   text-align: center;
   padding: 0;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5em;
   width: 100%;
 }
 
 .container .box:hover .content h3 {
-  top: -100px;
+  top: -6.25em;
   opacity: 1;
   transition: 0.5s;
   width: 100%;
@@ -160,6 +160,7 @@ background: #999;
   color: #fff;
   opacity: 0;
   width: 100%;
+  font-size: 1em;
 }
 
 .container .box:hover .content p{
@@ -201,16 +202,16 @@ background: #999;
   background: #648AD5;
 }
 
-.button {
+.button{
   background-color: #224a8c;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   border-radius: 50%;
   top: inherit;
-  width: 25px;
-  height: 25px;
+  width: 1.5625em;
+  height: 1.5625em;
   position: inherit;
   opacity: 0;
   left: 85%;
@@ -239,7 +240,7 @@ background: #999;
   height: 85vh;
   margin-left: 10%;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0.625em;
   overflow: hidden;
   opacity: 1;
   transition: 0s;
@@ -263,12 +264,12 @@ background: #999;
 }
 
 .container .bigbox .content h3 {
-  margin-top: -20px;
-  margin-bottom: 15px;
+  margin-top: -1.25em;
+  margin-bottom: 0.9375em;
   text-align: center;
   padding: 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 1.875em;
   opacity: 1;
   transition: 0.5s;
   transition: 0s;
@@ -281,6 +282,7 @@ background: #999;
   padding: 0;
   color: #fff;
   width: 100%;
+  font-size: 1em;
 }
 
 /* if i need scrollbars */
@@ -297,11 +299,11 @@ background: #999;
 .bigbox .button {
   background-color: #224a8c;
   color: white;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 1.5626em;
+  height: 1.5625em;
   position: inherit;
   opacity: 1;
   left: 92%;
@@ -323,7 +325,7 @@ background: #999;
 }
 
 h4{
-  font-size: 10px;
+  font-size: 0.625em;
   color: #ababab;
   text-align: center;
   white-space: pre-line;
@@ -342,7 +344,7 @@ h4{
   opacity: 0;
   width: 100%;
   height: 45%;
-  border: 1px solid white;
+  border: 0.0625em solid white;
   border-radius: 2%;
   display: block;
 }
@@ -363,7 +365,7 @@ h4{
 
 .text{
   position: absolute;
-  font-size: 15px;
+  font-size: 0.9375em;
   font-weight: bold;
   color: white;
   width: 100%;
@@ -387,14 +389,14 @@ h4{
   position: absolute;
   text-align: center;
   color: white;
-  padding: 2px;
+  padding: 0.125em;
   cursor: pointer;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .githubimg:hover{
@@ -407,7 +409,7 @@ h4{
 
 .bigbox .bigprojectimg{
   top: 6vh;
-  border: 1px solid white;
+  border: 0.0625em solid white;
   border-radius: 2%;
   right: 2vw;
   height: 20%;
@@ -421,7 +423,7 @@ h4{
 
 .bigbox .border{
   border: none;
-  box-shadow: 0px 0px 10px 0px #425f8c;
+  box-shadow: 0em 0em 0.625em 0em #425f8c;
   width: 100%;
   height: 40vh;
   vertical-align: top;
@@ -438,7 +440,7 @@ h4{
 
 .bigbox .description .projtitle{
   color: #313654;
-  font-size: 22px;
+  font-size: 1.375em;
   text-align: center;
   margin-top: 1%;
   width: 70%;
@@ -448,7 +450,7 @@ h4{
 .bigbox .description .texts{
   text-align: left;
   color: #292e4a;
-  font-size: 18px;
+  font-size: 1.125em;
   width: 60%;
   margin-top: 1%;
   margin-left: 6%;
@@ -459,7 +461,7 @@ h4{
 
 .bigbox .githubimg{
   color: blue;
-  font-size: 18px;
+  font-size: 1.125em;
   text-align: left;
   margin-top: 1%;
   position: absolute;
@@ -480,10 +482,334 @@ h4{
   text-align: center;
   display: inline-block;
   padding: 1vh 1vw;
-  border: 2px solid blue;
-  border-radius: 25px;
-  margin: 5px;
-  bottom: -25%;
+  border: 0.125em solid blue;
+  border-radius: 1.5625em;
+  margin: 0.3125em;
+  bottom: -35%;
+  font-size: 1em;
+}
+
+.portraitmode{
+  position: absolute;
+  background-color: black;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 200;
+}
+
+.portraitmode p{
+  position: relative;
+  font-size: 1em;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+}
+
+/*mobile portrait*/
+@media screen and (min-width:320px) and (max-width: 480px){
+.fc {
+  overflow: hidden;
+  display: none;
+}
+body{
+  overflow: hidden;
+}
+.portraitmode{
+  display: block;
+}
+
+  /* .section h1{
+    font-size: 2.5em;
+  }
+  .container .box .icon .fas {
+    font-size: 2.5em;
+  }
+  .container .box .content h3 {
+    font-size: 0.75em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 0.9375em;
+  }
+  .button {
+    font-size: 0.5em;
+  }
+  h4{
+    font-size: 0.3125em;
+  }
+  .bigbox .button {
+    font-size: 0.5em;
+  }
+  .text{
+    font-size: 0.46875em;
+  }
+  .githubimg{
+    font-size: 0.375em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 0.6875em;
+  }
+  .bigbox .description .texts{
+    font-size: 0.5625em;
+  }
+  .bigbox .githubimg{
+    font-size: 0.5625em;
+  }
+  .container .box .content p {
+    font-size: 0.5em;
+  }
+  .container .bigbox .content p {
+    font-size: 0.5em;
+  }
+  .bigbox .used{
+    font-size: 0.5em;
+  } */
+}
+
+/*mobile landscape*/
+@media screen and (min-width:480px){
+  .section h1{
+    font-size: 3.33em;
+  }
+  .container .box .icon .fas {
+    font-size: 3.33em;
+  }
+  .container .box .content h3 {
+    font-size: 1em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 1.25em;
+  }
+  .button {
+    font-size: 0.666em;
+  }
+  h4{
+    font-size: 0.4165em;
+  }
+  .bigbox .button {
+    font-size: 0.666em;
+  }
+  .text{
+    font-size: 0.46875em;
+  }
+  .githubimg{
+    font-size: 0.625em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 0.6875em;
+  }
+  .bigbox .description .texts{
+    font-size: 0.5625em;
+  }
+  .bigbox .githubimg{
+    font-size: 0.916em;
+  }
+  .container .box .content p {
+    font-size: 0.666em;
+  }
+  .container .bigbox .content p {
+    font-size: 0.666em;
+  }
+  .bigbox .used{
+    font-size: 0.666em;
+  }
+}
+
+/*ipad portrait*/
+@media screen and (min-width:768px){
+  .section h1{
+    font-size: 4.167em;
+  }
+  .container .box .icon .fas {
+    font-size: 4.167em;
+  }
+  .container .box .content h3 {
+    font-size: 1.25em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 1.5625em;
+  }
+  .button {
+    font-size: 0.8334em;
+  }
+  h4{
+    font-size: 0.521em;
+  }
+  .bigbox .button {
+    font-size: 0.833em;
+  }
+  .text{
+    font-size: 0.75em;
+  }
+  .githubimg{
+    font-size: 0.6em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 1.1em;
+  }
+  .bigbox .description .texts{
+    font-size: 0.9em;
+  }
+  .bigbox .githubimg{
+    font-size: 0.9em;
+  }
+  .container .box .content p {
+    font-size: 0.8334em;
+  }
+  .container .bigbox .content p {
+    font-size: 0.8334em;
+  }
+  .bigbox .used{
+    font-size: 0.8334em;
+  }
+}
+
+/*browser, ipad landscape*/
+@media screen and (min-width:1024px){
+  .section h1{
+    font-size: 5em;
+  }
+  .container .box .icon .fas {
+    font-size: 5em;
+  }
+  .container .box .content h3 {
+    font-size: 1.5em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 1.875em;
+  }
+  .button {
+    font-size: 1em;
+  }
+  h4{
+    font-size: 0.625em;
+  }
+  .bigbox .button {
+    font-size: 1em;
+  }
+  .text{
+    font-size: 0.9375em;
+  }
+  .githubimg{
+    font-size: 0.75em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 1.375em;
+  }
+  .bigbox .description .texts{
+    font-size: 1.125em;
+  }
+  .bigbox .githubimg{
+    font-size: 1.125em;
+  }
+  .container .box .content p {
+    font-size: 1em;
+  }
+  .container .bigbox .content p {
+    font-size: 1em;
+  }
+  .bigbox .used{
+    font-size: 1em;
+  }
+}
+
+/* browser*/
+@media screen and (min-width:1200px){
+  .section h1{
+    font-size: 6em;
+  }
+  .container .box .icon .fas {
+    font-size: 6em;
+  }
+  .container .box .content h3 {
+    font-size: 1.8em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 2.25em;
+  }
+  .button {
+    font-size: 1.2em;
+  }
+  h4{
+    font-size: 0.75em;
+  }
+  .bigbox .button {
+    font-size: 1.2em;
+  }
+  .text{
+    font-size: 1.125em;
+  }
+  .githubimg{
+    font-size: 0.9em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 1.65em;
+  }
+  .bigbox .description .texts{
+    font-size: 1.35em;
+  }
+  .bigbox .githubimg{
+    font-size: 1.35em;
+  }
+  .container .box .content p {
+    font-size: 1.2em;
+  }
+  .container .bigbox .content p {
+    font-size: 1.2em;
+  }
+  .bigbox .used{
+    font-size: 1.2em;
+  }
+}
+
+/* browser*/
+@media screen and (min-width:1600px){
+  .section h1{
+    font-size: 7.5em;
+  }
+  .container .box .icon .fas {
+    font-size: 7.5em;
+  }
+  .container .box .content h3 {
+    font-size: 2.25em;
+  }
+  .container .bigbox .content h3 {
+    font-size: 2.8125em;
+  }
+  .button {
+    font-size: 1.5em;
+  }
+  h4{
+    font-size: 0.9375em;
+  }
+  .bigbox .button {
+    font-size: 1.5em;
+  }
+  .text{
+    font-size: 1.40625em;
+  }
+  .githubimg{
+    font-size: 1.125em;
+  }
+  .bigbox .description .projtitle{
+    font-size: 2.0625em;
+  }
+  .bigbox .description .texts{
+    font-size: 1.6875em;
+  }
+  .bigbox .githubimg{
+    font-size: 1.6875em;
+  }
+  .container .box .content p {
+    font-size: 1.5em;
+  }
+  .container .bigbox .content p {
+    font-size: 1.5em;
+  }
+  .bigbox .used{
+    font-size: 1.5em;
+  }
 }
 
 @keyframes fadeIn {
