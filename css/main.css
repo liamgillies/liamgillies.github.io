@@ -78,7 +78,6 @@ body i{
   overflow: hidden;
   opacity: 0.6;
   transition: 0.5s;
-  background: #648AD5;
   animation: fadeIn 0.5s;
 }
 
@@ -491,10 +490,10 @@ h4{
 
 .portraitmode{
   position: absolute;
-  background-color: black;
+  background-color: blue;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: none;
   z-index: 200;
 }
