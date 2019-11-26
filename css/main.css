@@ -490,7 +490,7 @@ h4{
 
 .portraitmode{
   position: absolute;
-  background-color: blue;
+  background-color: #2C2F33;
   background-size: cover;
   width: 100vw;
   height: 120vh;
@@ -502,7 +502,7 @@ h4{
   position: relative;
   font-size: 1em;
   color: #fff;
-  top: 40%;
+  top: 30%;
   text-align: center;
 }
 
