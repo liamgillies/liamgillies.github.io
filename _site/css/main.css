@@ -187,7 +187,7 @@ background: #999;
   opacity: 1;
   transition: 0.5s;
   background: #648AD5;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 }
 
 .container .box:nth-child(3) .icon {
